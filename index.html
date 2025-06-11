@@ -4,217 +4,148 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chichebe John Nmesoma | Home</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
-    .header {
-      background-color: powderblue;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-    nav {
-      background-color: #2d8b9a;
-      padding: 0.75rem;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      cursor: pointer;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    .service, .portfolio-item {
-      border: 1px solid #ddd;
-      padding: 10px;
-      margin: 10px 0;
-    }
-    footer {
-      background-color:powderblue;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 20px;
-    }
-    .social a {
-      color: white;
-      text-decoration: none;
-      margin: 0 8px;
-    }
-    
-    /* Hide all sections by default */
-    .section {
-      display: none;
-    }
-    .section.active {
-      display: block;
-    }
-    
-    /* Booking form styles */
-    .booking-form {
-      background-color: #f9f9f9;
-      padding: 20px;
-      border-radius: 8px;
-      margin: 20px 0;
-    }
-    .form-group {
-      margin-bottom: 15px;
-    }
-    .form-group label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 8px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-    .form-row {
-      display: flex;
-      gap: 15px;
-    }
-    .form-row .form-group {
-      flex: 1;
-    }
-    .checkbox-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-    .checkbox-item {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-    .radio-group {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .radio-item {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-    .submit-btn {
-      background-color: #2d8b9a;
-      color: white;
-      padding: 12px 30px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    .submit-btn:hover {
-      background-color: #236b76;
-    }
-    
-    /* Confirmation message styles */
-    .confirmation {
-      background-color: #d4edda;
-      border: 1px solid #c3e6cb;
-      color: #155724;
-      padding: 15px;
-      border-radius: 4px;
-      margin: 20px 0;
-      display: none;
-    }
-    .confirmation.show {
-      display: block;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <header class="header">
-    <h1>Chichebe John Nmesoma</h1>
-    <p>Crafting Simple, Elegant Web Experiences</p>
+    <div class="header-content">
+      <h1>Chichebe John Nmesoma</h1>
+      <p>Crafting Simple, Elegant Web Experiences</p>
+    </div>
   </header>
 
-  <nav>
-    <a onclick="showSection('home')">Home</a> |
-    <a onclick="showSection('about')">About</a> |
-    <a onclick="showSection('services')">Services</a> |
-    <a onclick="showSection('portfolio')">Portfolio</a> |
-    <a onclick="showSection('book')">Book</a> |
-    <a onclick="showSection('contact')">Contact</a>
+  <nav class="nav">
+    <div class="nav-container">
+      <button class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a onclick="showSection('home')">Home</a></li>
+        <li><a onclick="showSection('about')">About</a></li>
+        <li><a onclick="showSection('services')">Services</a></li>
+        <li><a onclick="showSection('portfolio')">Portfolio</a></li>
+        <li><a onclick="showSection('book')">Book</a></li>
+        <li><a onclick="showSection('contact')">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
   <main class="container">
 
     <section id="home" class="section active">
-      <h2>Welcome!</h2>
-      <img src="https://picsum.photos/1000/300" alt="Abstract web design" width="100%">
-      <p>Hello! I'm <strong>Chichebe John Nmesoma</strong>. I help small businesses and individuals build clean, responsive websites that leave a lasting impression.</p>
+      <div class="hero">
+        <h2>Welcome!</h2>
+        <img src="/Flexisaf-Delivarable-1/assets/webdesign.png" alt="Abstract web design" class="hero-image">
+        <p>Hello! I'm <strong>Chichebe John Nmesoma</strong>. I help small businesses and individuals build clean, responsive websites that leave a lasting impression.</p>
+      </div>
     </section>
 
     <section id="about" class="section">
-      <h2>About Me</h2>
-      <article>
-        <h3>My Journey</h3>
-        <p>Hi there! I'm Chichebe, a self-taught web designer from Lagos. I started learning HTML in 2023 and fell in love with bringing ideas to life on the web.</p>
-        <h3>Skills &amp; Tools</h3>
-        <ul>
-          <li>HTML5 &amp; Semantic Markup</li>
-          <li>Basic CSS Styling</li>
-          <li>Responsive Design Principles</li>
-          <li>Introduction to JavaScript</li>
-        </ul>
-      </article>
+      <div class="about-content">
+        <h2>About Me</h2>
+        <div class="about-article">
+          <div class="about-text">
+            <h3>My Journey</h3>
+            <p>Hi there! I'm Chichebe, a self-taught web designer from Lagos. I started learning HTML in 2023 and fell in love with bringing ideas to life on the web.</p>
+          </div>
+          <div class="skills-section">
+            <h3>Skills &amp; Tools</h3>
+            <ul class="skills-list">
+              <li>HTML5 &amp; Semantic Markup</li>
+              <li>Advanced CSS &amp; Flexbox</li>
+              <li>CSS Grid Layouts</li>
+              <li>Responsive Design Principles</li>
+              <li>JavaScript &amp; Interactivity</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="services" class="section">
       <h2>Services</h2>
-      <div class="service">
-        <h3>Starter Website</h3>
-        <p>A simple, clean website to get you online quickly:</p>
-        <ul>
-          <li>Up to 5 pages</li>
-          <li>Mobile-friendly layout</li>
-          <li>Contact form</li>
-        </ul>
-        <p><strong>Starting at 2.5 million naira</strong></p>
-      </div>
-      <div class="service">
-        <h3>Website Refresh</h3>
-        <p>Breathe new life into your existing site:</p>
-        <ol>
-          <li>Modern design update</li>
-          <li>Improved performance</li>
-          <li>Responsive tweaks</li>
-        </ol>
-        <p><strong>Starting at 2 million naira</strong></p>
+      <div class="services-grid">
+        <div class="service">
+          <h3>Starter Website</h3>
+          <p>A simple, clean website to get you online quickly:</p>
+          <ul>
+            <li>Up to 5 pages</li>
+            <li>Mobile-friendly layout</li>
+            <li>Contact form</li>
+            <li>Basic SEO setup</li>
+          </ul>
+          <div class="price"><strong>Starting at ₦2.5 million</strong></div>
+        </div>
+        <div class="service">
+          <h3>Website Refresh</h3>
+          <p>Breathe new life into your existing site:</p>
+          <ol>
+            <li>Modern design update</li>
+            <li>Improved performance</li>
+            <li>Responsive tweaks</li>
+            <li>Content optimization</li>
+          </ol>
+          <div class="price"><strong>Starting at ₦2 million</strong></div>
+        </div>
+        <div class="service">
+          <h3>E-commerce Solution</h3>
+          <p>Complete online store setup:</p>
+          <ul>
+            <li>Product catalog</li>
+            <li>Shopping cart functionality</li>
+            <li>Payment integration</li>
+            <li>Inventory management</li>
+          </ul>
+          <div class="price"><strong>Starting at ₦5 million</strong></div>
+        </div>
+        <div class="service">
+          <h3>Custom Development</h3>
+          <p>Tailored solutions for unique needs:</p>
+          <ul>
+            <li>Custom functionality</li>
+            <li>API integrations</li>
+            <li>Database design</li>
+            <li>Ongoing support</li>
+          </ul>
+          <div class="price"><strong>Quote on request</strong></div>
+        </div>
       </div>
     </section>
 
     <section id="portfolio" class="section">
       <h2>Portfolio</h2>
-      <div class="portfolio-item">
-        <h3>Bakery Delight</h3>
-        <img src="https://picsum.photos/300/180?bakery" alt="Bakery website sample">
-        <p>A responsive site for a local bakery, complete with menu showcase.</p>
-      </div>
-      <div class="portfolio-item">
-        <h3>Green Garden Hotel</h3>
-        <img src="https://picsum.photos/300/180?hotel" alt="Hotel website sample">
-        <p>Hotel landing page with booking inquiry form.</p>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="https://picsum.photos/400/250?bakery" alt="Bakery website sample">
+          <div class="portfolio-content">
+            <h3>Bakery Delight</h3>
+            <p>A responsive site for a local bakery, complete with menu showcase and online ordering system.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://picsum.photos/400/250?hotel" alt="Hotel website sample">
+          <div class="portfolio-content">
+            <h3>Green Garden Hotel</h3>
+            <p>Hotel landing page with booking inquiry form and room gallery.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://picsum.photos/400/250?business" alt="Business website sample">
+          <div class="portfolio-content">
+            <h3>Tech Solutions Ltd</h3>
+            <p>Corporate website with service pages and client testimonials.</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://picsum.photos/400/250?fashion" alt="Fashion website sample">
+          <div class="portfolio-content">
+            <h3>Fashion Forward</h3>
+            <p>E-commerce site for a fashion boutique with product catalog and shopping cart.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -277,8 +208,9 @@
             <option value="">-- Select Service --</option>
             <option value="starter-website">Starter Website</option>
             <option value="website-refresh">Website Refresh</option>
+            <option value="ecommerce">E-commerce Solution</option>
+            <option value="custom-development">Custom Development</option>
             <option value="consultation">General Consultation</option>
-            <option value="custom-project">Custom Project</option>
           </select>
         </div>
 
@@ -286,10 +218,10 @@
           <label for="budget">Budget Range *</label>
           <select id="budget" name="budget" required>
             <option value="">-- Select Budget Range --</option>
-            <option value="under-1m">Under 1 Million Naira</option>
-            <option value="1-3m">1-3 Million Naira</option>
-            <option value="3-5m">3-5 Million Naira</option>
-            <option value="over-5m">Over 5 Million Naira</option>
+            <option value="under-1m">Under ₦1 Million</option>
+            <option value="1-3m">₦1-3 Million</option>
+            <option value="3-5m">₦3-5 Million</option>
+            <option value="over-5m">Over ₦5 Million</option>
           </select>
         </div>
 
@@ -304,11 +236,11 @@
             </div>
             <div class="radio-item">
               <input type="radio" id="inPerson" name="meetingType" value="in-person" required>
-              <label for="inPerson">In Person (Lagos)</label>
+              <label for="inPerson">In Person (Abuja)</label>
             </div>
             <div class="radio-item">
-              <input type="radio" id="phone" name="meetingType" value="phone" required>
-              <label for="phone">Phone Call</label>
+              <input type="radio" id="phoneCall" name="meetingType" value="phone" required>
+              <label for="phoneCall">Phone Call</label>
             </div>
           </div>
         </div>
@@ -388,33 +320,56 @@
     </section>
 
     <section id="contact" class="section">
-      <h2>Contact Me</h2>
-      <form action="#" method="post">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" placeholder="Your name" required><br><br>
+      <div class="contact-container">
+        <h2>Contact Me</h2>
+        <form class="contact-form" action="#" method="post">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
 
-        <label for="contactEmail">Email:</label><br>
-        <input type="email" id="contactEmail" name="email" placeholder="Your email" required><br><br>
+          <div class="form-group">
+            <label for="contactEmail">Email *</label>
+            <input type="email" id="contactEmail" name="email" placeholder="Your email" required>
+          </div>
 
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" cols="40" placeholder="Let me know how I can help" required></textarea><br><br>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Message subject">
+          </div>
 
-        <input type="submit" value="Send Message">
-      </form>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="6" placeholder="Let me know how I can help" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
     </section>
 
   </main>
 
-  <footer>
-    <p>Follow me on:</p>
-    <div class="social">
-      <a href="https://web.facebook.com/profile.php?id=100032823554889">Facebook</a> |
-      <a href="https://www.linkedin.com/in/chichebejohnnmesoma/">LinkedIn</a>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Follow me on:</p>
+      <div class="social">
+        <a href="https://web.facebook.com/profile.php?id=100032823554889">Facebook</a>
+        <a href="https://www.linkedin.com/in/chichebejohnnmesoma/">LinkedIn</a>
+      </div>
+      <p>&copy; 2025 Chichebe John Nmesoma. All rights reserved.</p>
     </div>
-    <p>&copy; 2025 Chichebe John Nmesoma. All rights reserved.</p>
   </footer>
 
   <script>
+    // Mobile Navigation Toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
     // Navigation function
     function showSection(sectionId) {
       // Hide all sections
@@ -425,6 +380,9 @@
       
       // Show selected section
       document.getElementById(sectionId).classList.add('active');
+      
+      // Close mobile menu if open
+      navLinks.classList.remove('active');
     }
 
     // Form submission function
@@ -475,6 +433,13 @@
     document.addEventListener('DOMContentLoaded', function() {
       const today = new Date().toISOString().split('T')[0];
       document.getElementById('appointmentDate').setAttribute('min', today);
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+      }
     });
   </script>
 
